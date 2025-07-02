@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JTB Northern Region: Attraction Owners Forum</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600&family=Montserrat:wght@600;800&family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --pink: #ec008c;
+      --green: #228913;
+      --yellow: #e4ae2b;
+      --grey-bg: #f2f2f2;
+      --white: #ffffff;
+      --font-heading: 'Libre Franklin', sans-serif;
+      --font-body: 'Libre Franklin', sans-serif;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:var(--font-body); background:var(--grey-bg); overflow:hidden; }
+    .logo-bar { position:absolute; top:0; left:0; width:100%; height:60px; background:var(--white); padding:10px 20px; display:flex; align-items:center; box-shadow:0 2px 5px rgba(0,0,0,0.1); z-index:10; }
+    .logo-bar img { height:40px; margin-right:15px; }
+    .logo-bar span { font-family:var(--font-heading); font-weight:600; color:#333; }
+    .carousel { display:flex; flex-direction:column; transition:transform .6s ease; }
+    .slide { position:relative; width:100vw; height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; }
+    .slide::before { content:''; position:absolute; top:0; left:0; right:0; bottom:0; background-size:cover; background-position:center; filter:opacity(0.4); z-index:1; }
+    .slide:nth-child(1)::before { background-image:url('https://i.imgur.com/1Hj2M4P.png'); }
+    .slide:nth-child(2)::before { background-image:url('https://i.imgur.com/1Hj2M4P.png'); }
+    .slide:nth-child(3)::before { background-image:url('https://i.imgur.com/wmtg8PJ.png'); }
+    .slide:nth-child(4)::before { background-image:url('https://i.imgur.com/IyNNwwy.png'); }
+    .slide:nth-child(5)::before { background-image:url('https://i.imgur.com/OCD5Axk.png'); }
+    .slide:nth-child(6)::before { background-image:url('https://i.imgur.com/G6P0e6P.png'); }
+    .slide h1, .slide h2 { position:relative; z-index:2; text-align:center; text-shadow:0 2px 6px rgba(255,255,255,0.8); font-family:var(--font-heading); font-weight:600; }
+    .slide:first-child h1 { font-family:'Great Vibes', cursive; font-size:6rem; color:var(--pink); margin-bottom:0.5rem; }
+    .slide:first-child h2 { font-size:2rem; color:var(--green); margin-bottom:2rem; }
+    .slide:not(:first-child) h1 { font-size:4rem; color:var(--pink); margin-bottom:0.5rem; }
+    .slide:not(:first-child) h2 { font-size:1.75rem; color:var(--green); margin-bottom:1.5rem; }
+    .cards { position:relative; z-index:2; display:flex; flex-wrap:wrap; gap:1.5rem; max-width:900px; justify-content:center; padding:1rem; }
+    .card { background:var(--white); border-radius:16px; padding:2rem; flex:1 1 45%; max-width:45%; box-shadow:0 12px 25px rgba(0,0,0,0.15); border-top:4px solid var(--pink); transition:transform .3s, box-shadow .3s; display:flex; align-items:flex-start; gap:1rem; z-index:2; }
+    .card:nth-child(even) { border-top-color:var(--green); }
+    .card:nth-child(3n) { border-top-color:var(--yellow); }
+    .card:hover { transform:translateY(-8px); box-shadow:0 20px 40px rgba(0,0,0,0.2); }
+    .card svg { width:28px; height:28px; flex-shrink:0; margin-top:4px; }
+    .card span { font-size:1.125rem; color:#333; line-height:1.5; }
+    .legal-note { position:absolute; bottom:20px; left:50%; transform:translateX(-50%); font-size:0.75rem; color:rgba(0,0,0,0.6); z-index:2; }
+    .controls { position:absolute; top:50%; width:100%; display:flex; justify-content:space-between; transform:translateY(-50%); padding:0 2rem; pointer-events:none; z-index:2; }
+    .control-btn { pointer-events:auto; background:var(--white); border:none; width:60px; height:60px; border-radius:50%; font-size:2rem; color:#333; box-shadow:0 6px 20px rgba(0,0,0,0.2); cursor:pointer; transition:transform .2s; }
+    .control-btn:hover { transform:scale(1.1); }
+  </style>
+</head>
+<body>
+  <div class="logo-bar">
+    <img src="https://i.imgur.com/XTHBcWD.png" alt="JTB Logo">
+    <span>JTB Northern Region</span>
+  </div>
+  <div class="carousel" id="carousel">
+    <!-- Slide 1 -->
+    <section class="slide">
+      <h1>Welcome back</h1>
+      <h2>Attraction Owners Forum</h2>
+      <div class="cards">
+        <div class="card"><svg fill="var(--pink)" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12"/></svg><span>We hope you enjoyed reconnecting over light bites and stories.</span></div>
+        <div class="card"><svg fill="var(--green)" viewBox="0 0 24 24"><path d="M12 0l3 9h-6l3-9zM12 24l-3-9h6l-3 9zM0 12l9 3v-6l-9 3zM24 12l-9-3v6l9-3z"/></svg><span>Let’s kick off with our objectives for today.</span></div>
+      </div>
+      <div class="legal-note">All images are property of their respective owners.</div>
+    </section>
+    <!-- Slide 2 -->
+    <section class="slide">
+      <h1>Purpose & Objectives</h1>
+      <h2>Setting our course</h2>
+      <div class="cards">
+        <div class="card"><svg fill="var(--pink)" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg><span>Define how the DAM role elevates safety and quality across all attractions.</span></div>
+        <div class="card"><svg fill="var(--pink)" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg><span>Showcase the power of teamwork and brand promise.</span></div>
+        <div class="card"><svg fill="var(--pink)" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg><span>Pin down actionable next steps that spark measurable impact.</span></div>
+      </div>
+      <div class="legal-note">All images are property of their respective owners.</div>
+    </section>
+    <!-- Slide 3 -->
+    <section class="slide">
+      <h1>Strategic Importance</h1>
+      <h2>Why collaboration matters</h2>
+      <div class="cards">
+        <div class="card"><svg fill="var(--green)" viewBox="0 0 24 24"><polygon points="12,2 22,22 2,22"/></svg><span>Tap local expertise at Dunn’s River to ensure safe guest experiences.</span></div>
+        <div class="card"><svg fill="var(--green)" viewBox="0 0 24 24"><polygon points="12,2 22,22 2,22"/></svg><span>Guarantee consistent experiences regardless of season or staffing.</span></div>
+        <div class="card"><svg fill="var(--green)" viewBox="0 0 24 24"><polygon points="12,2 22,22 2,22"/></svg><span>Shield our cultural heritage—Rose Hall ghost stories belong to Jamaica’s soul.</span></div>
+        <div class="card"><svg fill="var(--green)" viewBox="0 0 24 24"><polygon points="12,2 22,22 2,22"/></svg><span>Pool resources for crisis readiness with shared plans and drills.</span></div>
+      </div>
+      <div class="legal-note">All images are property of their respective owners.</div>
+    </section>
+    <!-- Slide 4 -->
+    <section class="slide">
+      <h1>Best Practices</h1>
+      <h2>Building blocks of engagement</h2>
+      <div class="cards">
+        <div class="card"><svg fill="var(--yellow)" viewBox="0 0 24 24"><polygon points="12,2 15,11 23,11 17,16 19,24 12,19 5,24 7,16 1,11 9,11"/></svg><span>Quarterly workshops: shape policies before final sign-off.</span></div>
+        <div class="card"><svg fill="var(--yellow)" viewBox="0 0 24 24"><polygon points="12,2 15,11 23,11 17,16 19,24 12,19 5,24 7,16 1,11 9,11"/></svg><span>Real-time alerts: Slack channel + WhatsApp group for immediate updates.</span></div>
+        <div class="card"><svg fill="var(--yellow)" viewBox="0 0 24 24"><polygon points="12,2 15,11 23,11 17,16 19,24 12,19 5,24 7,16 1,11 9,11"/></svg><span>JAPA trainings: rated 4.8/5 by peers—kicking off July 15.</span></div>
+        <div class="card"><svg fill="var(--yellow)" viewBox="0 0 24 24"><polygon points="12,2 15,11 23,11 17,16 19,24 12,19 5,24 7,16 1,11 9,11"/></svg><span>Formalisation support: gain licensing, financing & visibility.</span></div>
+      </div>
+      <div class="legal-note">All images are property of their respective owners.</div>
+    </section>
+    <!-- Slide 5 -->
+    <section class="slide">
+      <h1>Next Steps</h1>
+      <h2>Join the movement</h2>
+      <div class="cards">
+        <div class="card"><svg fill="var(--pink)" viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2z"/></svg><span>Nominate reps for Assurance Council by July 10.</span></div>
+        <div class="card"><svg fill="var(--pink)" viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2z"/></svg><span>Sign up for training (starts July 15); link emailed.</span></div>
+        <div class="card"><svg fill="var(--pink)" viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2z"/></svg><span>Register for Crisis Drill on August 5; count toward certification.</span></div>
+      </div>
+      <div class="legal-note">All images are property of their respective owners.</div>
+    </section>
+    <!-- Slide 6 -->
+    <section class="slide">
+      <h1>Questions & Closing</h1>
+      <h2>We're all ears</h2>
+      <div class="cards">
+        <div class="card"><svg fill="#555" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg><span>Any questions? Raise your hand or drop in chat.</span></div>
+        <div class="card"><svg fill="#555" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/></svg><span>Edited recording live on YouTube tomorrow.</span></div>
+        <div class="card"><svg fill="#555" viewBox="0 0 24 24"><path d="M2 12l10 10L22 12"/></svg><span>Thank you for making Northern Jamaica shine!</span></div>
+      </div>
+      <div class="legal-note">All images are property of their respective owners.</div>
+    </section>
+  </div>
+  <div class="controls">
+    <button class="control-btn" id="prevBtn">&#9650;</button>
+    <button class="control-btn" id="nextBtn">&#9660;</button>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const carousel = document.getElementById('carousel');
+      const slides = carousel.querySelectorAll('.slide');
+      let idx = 0;
+      const move = () => carousel.style.transform = `translateY(${-idx * window.innerHeight}px)`;
+      document.getElementById('nextBtn').addEventListener('click', () => { idx = (idx + 1) % slides.length; move(); });
+      document.getElementById('prevBtn').addEventListener('click', () => { idx = (idx - 1 + slides.length) % slides.length; move(); });
+      window.addEventListener('resize', move);
+    });
+  </script>
+</body>
+</html>
