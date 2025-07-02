@@ -21,6 +21,8 @@
     .logo-bar { position:absolute; top:0; left:0; width:100%; height:60px; background:var(--white); padding:10px 20px; display:flex; align-items:center; box-shadow:0 2px 5px rgba(0,0,0,0.1); z-index:10; }
     .logo-bar img { height:40px; margin-right:15px; }
     .logo-bar span { font-family:var(--font-heading); font-weight:600; color:#333; }
+    .logo-bar a.nav-btn { margin-left: auto; background:var(--pink); color:var(--white); text-decoration:none; padding:5px 12px; border-radius:4px; font-weight:600; font-family:Montserrat, sans-serif; transition:background .2s; }
+    .logo-bar a.nav-btn:hover { background:#c60075; }
     .carousel { display:flex; flex-direction:column; transition:transform .6s ease; }
     .slide { position:relative; width:100vw; height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; }
     .slide::before { content:''; position:absolute; top:0; left:0; right:0; bottom:0; background-size:cover; background-position:center; filter:opacity(0.4); z-index:1; }
@@ -52,6 +54,7 @@
   <div class="logo-bar">
     <img src="https://i.imgur.com/XTHBcWD.png" alt="JTB Logo">
     <span>JTB Northern Region</span>
+    <a href="agenda.html" class="nav-btn">Agenda</a>
   </div>
   <div class="carousel" id="carousel">
     <!-- Slide 1 -->
