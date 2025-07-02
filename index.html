@@ -48,7 +48,21 @@
     .controls { position:absolute; top:50%; width:100%; display:flex; justify-content:space-between; transform:translateY(-50%); padding:0 2rem; pointer-events:none; z-index:2; }
     .control-btn { pointer-events:auto; background:var(--white); border:none; width:60px; height:60px; border-radius:50%; font-size:2rem; color:#333; box-shadow:0 6px 20px rgba(0,0,0,0.2); cursor:pointer; transition:transform .2s; }
     .control-btn:hover { transform:scale(1.1); }
-  </style>
+    /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .logo-bar { flex-wrap: wrap; height: auto; padding: 8px 10px; }
+    .logo-bar img { height: 32px; margin-right: 10px; }
+    .logo-bar span { font-size: 1rem; }
+    .logo-bar a.nav-btn { padding: 4px 8px; font-size: 0.875rem; }
+    .slide:first-child h1 { font-size: 4rem; }
+    .slide:first-child h2 { font-size: 1.5rem; }
+    .slide:not(:first-child) h1 { font-size: 2.5rem; }
+    .slide:not(:first-child) h2 { font-size: 1.25rem; }
+    .cards { flex-direction: column; max-width: 100%; gap: 1rem; padding: 0.5rem; }
+    .card { max-width: 100%; flex: 1 1 auto; padding: 1.5rem; }
+    .control-btn { width: 48px; height: 48px; font-size: 1.25rem; }
+  }
+</style>
 </head>
 <body>
   <div class="logo-bar">
